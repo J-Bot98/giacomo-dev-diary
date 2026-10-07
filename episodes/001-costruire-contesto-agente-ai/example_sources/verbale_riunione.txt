@@ -1,0 +1,23 @@
+PROGETTO DIMOSTRATIVO - VERBALE CON DATI INVENTATI
+
+Progetto: Boreale Retail - consolidamento ordini
+Data: 18 marzo 2026
+Partecipanti: Elena Bianchi (sviluppo), Marco Riva (analisi funzionale),
+Sara Neri (Operations)
+
+Decisioni
+1. Il job giornaliero partira' alle 02:00, dopo la disponibilita' dello
+   snapshot POS. La proposta precedente delle 01:00 e' superata.
+2. Gli ordini annullati restano nel datamart. Il mapping dei codici POS deve
+   essere approvato da Operations prima del rilascio.
+3. I report useranno business_date. created_at resta disponibile solo per
+   diagnosi tecnica e non determina il giorno del report.
+4. Nei log sono ammessi batch_id, conteggi e durata; non registrare payload,
+   email o telefono.
+
+Stato e azioni
+- Il caricamento staging e' disponibile.
+- La riconciliazione e' ancora in test; il caso annullamento POS e' aperto.
+- Sara inviera' il mapping POS aggiornato entro il 20 marzo.
+- Elena aggiornera' i test dopo aver ricevuto il mapping.
+- Nessuna data di rilascio in produzione e' stata concordata.

@@ -141,3 +141,22 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Python environments and generated files
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# Local model and Hugging Face caches
+.cache/huggingface/
+
+# Generated project context may contain personal or confidential information
+episodes/001-costruire-contesto-agente-ai/contesto.md

@@ -1,0 +1,39 @@
+PROGETTO DIMOSTRATIVO - NOMI E INDIRIZZI INVENTATI
+
+Da: Elena Bianchi <elena.bianchi@example.invalid>
+A: Marco Riva <marco.riva@example.invalid>
+Data: 12 marzo 2026, 10:14
+Oggetto: Boreale Retail - orario e riconciliazione ordini
+
+Ciao Marco,
+
+nei test di staging il totale e-commerce torna. Sul POS vediamo invece una
+differenza quando l'ordine viene annullato dopo la chiusura della giornata.
+Per ora non escluderei gli annullati: ci serve il mapping funzionale prima di
+decidere come rappresentarli nel datamart.
+
+Nel piano iniziale avevamo indicato le 01:00 per il caricamento giornaliero,
+ma il file e-commerce arriva intorno alle 00:30 e lo snapshot POS non e'
+sempre pronto. L'orario era una proposta, non una decisione confermata.
+
+Grazie,
+Elena
+
+--- Risposta ---
+
+Da: Marco Riva <marco.riva@example.invalid>
+A: Elena Bianchi <elena.bianchi@example.invalid>
+Data: 12 marzo 2026, 11:02
+Oggetto: Re: Boreale Retail - orario e riconciliazione ordini
+
+Ciao Elena,
+
+confermo che gli annullati vanno mantenuti come stato dell'ordine. Il codice
+stato POS definitivo pero' e' ancora da validare con il referente Operations.
+Per l'orario, aspettiamo il verbale del prossimo allineamento: non considerare
+01:00 come approvato.
+
+Promemoria: per i report usare business_date; created_at e' una data tecnica.
+
+A presto,
+Marco

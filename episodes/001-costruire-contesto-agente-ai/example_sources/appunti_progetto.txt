@@ -1,0 +1,30 @@
+PROGETTO DIMOSTRATIVO - DATI E NOMI INTERAMENTE INVENTATI
+
+Appunti raccolti durante il kick-off del progetto Boreale Retail.
+
+Obiettivo
+Consolidare ogni giorno gli ordini provenienti dal canale e-commerce e dai
+negozi fisici in un datamart usato per la reportistica interna.
+
+Stack
+- Python 3.11
+- PostgreSQL 15
+- Apache Airflow 2.8
+
+Stato al 10 marzo 2026
+- Le mappature dei campi sorgente sono state riviste.
+- Il caricamento iniziale nell'area staging e' disponibile.
+- I test di riconciliazione sono in corso.
+- Il rilascio in produzione non e' ancora approvato.
+
+Regole emerse
+- La chiave logica dell'ordine e' composta da canale e order_id.
+- Per i report usare business_date, non la data tecnica di inserimento.
+- L'aggiornamento deve essere idempotente: rilanciare un batch non deve
+	duplicare gli ordini.
+- Non copiare email o telefono dei clienti nel datamart.
+- Nei log registrare batch_id e conteggi, mai righe complete o dati personali.
+
+Da chiarire
+- Il mapping definitivo degli ordini annullati del POS e' ancora in verifica.
+- L'orario giornaliero del job dipende dalla conferma del team Operations.
