@@ -1,0 +1,37 @@
+# ===========================
+# Python
+# ===========================
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# pip
+pip-log.txt
+
+# ===========================
+# Progetto specifico
+# ===========================
+
+# Contesti generati dallo script
+output/
+*.generated.md
+contesto_demo.md
+
+# File sorgente dell'utente (mail, appunti)
+sources/
+
+# Config locale con dati personali
+config.yaml
+!config.example.yaml
