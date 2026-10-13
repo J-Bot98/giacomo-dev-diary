@@ -74,6 +74,10 @@ Remove-Item Env:HF_MODEL_ID
 
 3. Trovi il risultato in `contesto.md`.
 
+Il contesto generato puo' contenere informazioni personali o riservate. Il file
+`contesto.md` e' escluso dal versionamento: controlla sempre il contenuto prima
+di condividerlo.
+
 ### Provare gli esempi inclusi
 
 La cartella `example_sources` contiene appunti, una conversazione email,
